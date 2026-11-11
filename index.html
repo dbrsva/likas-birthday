@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0035AD">
+<title>Лике 19! 💛</title>
+<meta name="description" content="Секретная операция миньонов: день рождения Лики">
+<link rel="icon" href="assets/stickers/goggles.webp">
+<link rel="preload" href="assets/fonts/unbounded-cyrillic-cb504d.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<!-- ============ ВОРОТА-КАПСУЛА ============ -->
+<div class="gate" id="gate" role="dialog" aria-label="Открыть поздравление">
+  <div class="gate__half gate__half--top"></div>
+  <div class="gate__half gate__half--bottom"></div>
+  <div class="gate__inner">
+    <p class="gate__stamp">совершенно секретно</p>
+    <img class="gate__goggles" src="assets/stickers/goggles.webp" alt="" width="320" height="170">
+    <h1 class="gate__title">Операция<br><span>«Лика-19»</span></h1>
+    <p class="gate__text">Миньоны всю ночь что-то клеили, пели и прятали бананы.<br>Кажется, это для тебя.</p>
+    <button class="btn btn--big" id="gateBtn" type="button"><span>Открыть подарок</span> <span aria-hidden="true">🎁</span></button>
+    <p class="gate__hint">Включится тихая музыка — выключить можно кнопкой в углу</p>
+  </div>
+</div>
+
+<!-- ============ ВЕРХНЯЯ ПАНЕЛЬ ============ -->
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div><img class="progress__banana" id="progressBanana" src="assets/stickers/banana.webp" alt=""></div>
+<button class="logo" id="logo" type="button" aria-label="Секретная кнопка миньонов"><img src="assets/stickers/goggles.webp" alt=""></button>
+<button class="sound" id="soundBtn" type="button" aria-label="Включить музыку" aria-pressed="false">
+  <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <span class="sound__label">музыка</span>
+</button>
+
+<main>
+<!-- ============ 1. ГЕРОЙ ============ -->
+<section class="hero" id="top">
+  <div class="hero__stars" aria-hidden="true">
+    <img class="fl fl--a" data-depth="0.25" style="--x:6%;--y:14%;--w:58px" src="assets/stickers/star-06.webp" alt="">
+    <img class="fl fl--b" data-depth="0.4" style="--x:86%;--y:9%;--w:46px" src="assets/stickers/star-16.webp" alt="">
+    <img class="fl fl--c" data-depth="0.15" style="--x:91%;--y:52%;--w:40px" src="assets/stickers/star-22.webp" alt="">
+    <img class="fl fl--a" data-depth="0.35" style="--x:3%;--y:63%;--w:44px" src="assets/stickers/star-13.webp" alt="">
+    <img class="fl fl--b" data-depth="0.2" style="--x:47%;--y:4%;--w:30px" src="assets/stickers/star-26.webp" alt="">
+    <img class="fl fl--c" data-depth="0.3" style="--x:70%;--y:88%;--w:36px" src="assets/stickers/star-11.webp" alt="">
+    <img class="fl fl--a" data-depth="0.45" style="--x:20%;--y:92%;--w:30px" src="assets/stickers/star-24.webp" alt="">
+  </div>
+
+  <div class="hero__grid">
+    <div class="hero__text">
+      <div class="banner" aria-label="Happy Birthday">
+        <div class="banner__row">
+          <img src="assets/stickers/L-h.webp" alt="H"><img src="assets/stickers/L-a1.webp" alt="A"><img src="assets/stickers/L-p1.webp" alt="P"><img src="assets/stickers/L-p2.webp" alt="P"><img src="assets/stickers/L-y1.webp" alt="Y">
+        </div>
+        <div class="banner__row">
+          <img src="assets/stickers/L-b.webp" alt="B"><img src="assets/stickers/L-i.webp" alt="I"><img src="assets/stickers/L-r.webp" alt="R"><img src="assets/stickers/L-t.webp" alt="T"><img src="assets/stickers/L-h2.webp" alt="H"><img src="assets/stickers/L-d.webp" alt="D"><img src="assets/stickers/L-a2.webp" alt="A"><img src="assets/stickers/L-y2.webp" alt="Y">
+        </div>
+      </div>
+      <h2 class="mega hero__title"><span class="hero__name">Лика,</span> <span class="hero__age">тебе <b id="ageNum">19</b>!</span></h2>
+      <p class="hero__sub">Все миньоны мира официально объявили этот день праздником. Колпаки надеты, бананы спрятаны, песня отрепетирована. Почти.</p>
+      <a class="btn btn--yellow" href="#dossier" id="startBtn"><span>Начать праздник</span> <span class="btn__arrow" aria-hidden="true">↓</span></a>
+    </div>
+
+    <div class="hero__stage">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <img class="stk hero__party hero__party--l" src="assets/stickers/party-02.webp" alt="Миньон с капкейком" data-say="Капкейк? Мне? Нет, тебе!">
+      <img class="stk hero__party hero__party--r" src="assets/stickers/party-05.webp" alt="Миньон в колпаке Birthday Girl" data-say="Это мой колпак! Ладно, твой.">
+      <button class="hero__lika" id="heroLika" type="button" aria-label="Миньон Лика — нажми!">
+        <img src="assets/stickers/hero-lika.webp" alt="Миньон с лицом Лики в короне" width="585" height="901">
+      </button>
+      <div class="bubble" id="heroBubble" role="status" aria-live="polite">Белло! Нажми на меня 👑</div>
+    </div>
+  </div>
+  <svg class="wave wave--to-yellow" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C 160 10 320 90 480 50 S 800 10 960 50 S 1280 90 1440 40 V90 H0Z"/></svg>
+</section>
+
+<!-- ============ 2. ДОСЬЕ + ПОЗДРАВЛЕНИЕ ============ -->
+<section class="dossier" id="dossier">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Секция 01 · Лаборатория миньонов</p>
+      <h2 class="mega mega--blue">Досье на именинницу</h2>
+    </header>
+
+    <div class="file reveal">
+      <img class="stk file__scientist" src="assets/stickers/party-01.webp" alt="Миньон-учёный" data-say="Исследование завершено: 100% чудо!">
+      <div class="file__tab">Объект № 19</div>
+      <div class="file__stamp" aria-hidden="true">Одобрено<br>миньонами</div>
+      <div class="file__body">
+        <button class="file__photo zoomable" type="button" data-group="lika" data-index="1" aria-label="Открыть фото Лики">
+          <img src="assets/photos/lika-2.jpg" alt="Лика" width="1158" height="682" loading="lazy">
+          <span class="file__clip" aria-hidden="true"></span>
+        </button>
+        <dl class="file__data">
+          <div><dt>Имя</dt><dd>Лика</dd></div>
+          <div><dt>Возраст</dt><dd><span class="count" data-to="19">0</span> лет</dd></div>
+          <div><dt>Статус</dt><dd>Именинница · королева дня 👑</dd></div>
+          <div><dt>Особые приметы</dt><dd>Улыбка, от которой миньоны роняют бананы</dd></div>
+        </dl>
+      </div>
+      <div class="meters">
+        <div class="meter"><span class="meter__name">Красота</span><span class="meter__track"><span class="meter__fill" style="--to:100%"></span></span><span class="meter__val">100%</span></div>
+        <div class="meter"><span class="meter__name">Милота</span><span class="meter__track"><span class="meter__fill" style="--to:100%"></span></span><span class="meter__val">100%</span></div>
+        <div class="meter"><span class="meter__name">Уровень праздника</span><span class="meter__track"><span class="meter__fill meter__fill--over" style="--to:100%"></span></span><span class="meter__val">∞</span></div>
+      </div>
+    </div>
+
+    <div class="spy reveal">
+      <p class="spy__title"><span class="rec" aria-hidden="true"></span> Камеры наблюдения зафиксировали:</p>
+      <div class="spy__strip" id="likaStrip"></div>
+      <p class="spy__note">Вывод: объект слишком красивый. Миньоны в шоке.</p>
+    </div>
+
+    <article class="letter reveal" id="letter">
+      <img class="stk letter__minion" src="assets/stickers/party-03.webp" alt="Миньон с розой" data-say="Это тебе 🌹">
+      <img class="letter__patch letter__patch--sun" src="assets/stickers/patch-19.webp" alt="" aria-hidden="true">
+      <div class="letter__head">
+        <h3 class="letter__title">Поздравление</h3>
+        <button class="chip" id="translateBtn" type="button" aria-pressed="false"><span>Перевести на миньонский</span> 🍌</button>
+      </div>
+      <div class="letter__text" id="letterRu">
+        <p><b>Лика, с днём рождения!</b> 💛</p>
+        <p>Тебе 19 — и это, по данным лаборатории, лучший возраст, чтобы быть яркой, смелой и немножко безумной (миньоны одобряют).</p>
+        <p>Желаем, чтобы этот год был жёлтым, как солнце, и тёплым, как объятия. Чтобы рядом всегда были твои люди, с которыми смешно до слёз. Чтобы мечты сбывались быстрее, чем миньоны находят бананы, а поводов улыбаться было больше, чем звёздочек на этом сайте.</p>
+        <p>Оставайся такой же красивой, нежной и настоящей. Мы тебя очень любим!</p>
+        <p class="letter__sign">Твои люди и целая армия миньонов</p>
+      </div>
+      <div class="letter__text letter__text--minion" id="letterMn" hidden>
+        <p><b>Белло, Лика! Хаппи бёсдэй!</b> 💛</p>
+        <p>Тулалилу ти амо! Нинетин! Пупупу… бапл-бапл, кампай!</p>
+        <p>Бе-ду, бе-ду! Банана-йо, гелато, папая — ла букати, Лика! Пара ту, пара ту, муа-муа-муа!</p>
+        <p>Поппадом! Кампай! Тэнк ю! Банааана! 🍌🍌🍌</p>
+        <p class="letter__sign">Стюарт, Кевин, Боб и ещё 2000 миньонов</p>
+      </div>
+    </article>
+  </div>
+  <svg class="wave wave--to-white" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 200 90 400 0 720 45 S 1240 90 1440 30 V90 H0Z"/></svg>
+</section>
+
+<!-- ============ 3. ЛИКА И ЕЁ ЛЮДИ ============ -->
+<section class="people" id="people">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker kicker--blue">Секция 02 · Фотоархив</p>
+      <h2 class="mega mega--blue">Лика и её люди</h2>
+      <p class="sec-sub">Нажми на фото, чтобы рассмотреть поближе. А на фотоаппарат — чтобы сделать вспышку 📸</p>
+      <button class="camera stk" id="camera" type="button" aria-label="Сделать вспышку"><img src="assets/stickers/patch-30.webp" alt=""></button>
+    </header>
+
+    <div class="tabs reveal" role="tablist" aria-label="Фильтр фотографий">
+      <button class="tab is-on" role="tab" aria-selected="true" data-filter="all">Все</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="diana">Диана</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="alina">Алина</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="sardaana-aita">Сардаана и Айта</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="arisha">Ариша</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="eslanda">Эсланда</button>
+    </div>
+
+    <div class="board" id="board">
+      <img class="board__deco board__deco--1" src="assets/stickers/patch-05.webp" alt="" aria-hidden="true">
+      <img class="board__deco board__deco--2" src="assets/stickers/patch-22.webp" alt="" aria-hidden="true">
+      <img class="board__deco board__deco--3" src="assets/stickers/patch-26.webp" alt="" aria-hidden="true">
+      <div class="masonry" id="masonry"></div>
+    </div>
+
+    <div class="shelf reveal" aria-label="Стикеры">
+      <img class="stk" src="assets/stickers/party-06.webp" alt="Миньон с косичками" data-say="Обожаю ваши фотки!">
+      <img class="stk" src="assets/stickers/patch-04.webp" alt="Вышитый мишка" data-say="Обнимашки!">
+      <img class="stk" src="assets/stickers/party-04.webp" alt="Миньон в очках-сердечках" data-say="Красотки!">
+      <img class="stk" src="assets/stickers/patch-14.webp" alt="Баночка варенья" data-say="Сладко!">
+      <img class="stk" src="assets/stickers/party-08.webp" alt="Миньон в костюме единорога" data-say="Я единорог. Не спорь.">
+      <img class="stk" src="assets/stickers/patch-06.webp" alt="Белый мишка" data-say="Пупупу!">
+      <img class="stk" src="assets/stickers/patch-20.webp" alt="Лоскутный цветок" data-say="Цветочек для Лики">
+      <img class="stk" src="assets/stickers/party-00.webp" alt="Миньон в парике" data-say="Я тоже на фото хочу!">
+    </div>
+  </div>
+  <svg class="wave wave--to-night" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C 240 0 480 90 720 40 S 1200 0 1440 55 V90 H0Z"/></svg>
+</section>
+
+<!-- ============ 4. ЛИКА И ЛЁША ============ -->
+<section class="love" id="love">
+  <div class="love__sky" id="loveSky" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker kicker--yellow">Секция 03 · Особо важный объект</p>
+      <h2 class="mega love__title">Лика <span class="love__plus">+</span> Лёша</h2>
+      <p class="sec-sub sec-sub--light">Миньоны проверили: да, это любовь. Листай карточки 💛</p>
+    </header>
+
+    <div class="love__grid">
+      <div class="love__side love__side--l reveal">
+        <img class="stk" src="assets/stickers/love-03.webp" alt="Миньон с большим сердцем" data-say="Держите сердечко!">
+        <img class="stk" src="assets/stickers/love-02.webp" alt="I Love" data-say="I love… вас двоих!">
+      </div>
+
+      <div class="stack-wrap reveal">
+        <img class="stack__bow" src="assets/stickers/patch-16.webp" alt="" aria-hidden="true">
+        <div class="stack" id="stack" aria-roledescription="карусель" aria-label="Фото Лики и Лёши"></div>
+        <div class="stack__ctrl">
+          <button class="round" id="stackPrev" type="button" aria-label="Предыдущее фото">←</button>
+          <div class="stack__dots" id="stackDots"></div>
+          <button class="round" id="stackNext" type="button" aria-label="Следующее фото">→</button>
+        </div>
+        <button class="chip chip--light" id="stackZoom" type="button">Открыть крупно ⤢</button>
+      </div>
+
+      <div class="love__side love__side--r reveal">
+        <img class="stk" src="assets/stickers/love-10.webp" alt="Миньон с букетом" data-say="Букет для Лики!">
+        <img class="stk" src="assets/stickers/love-07.webp" alt="Миньон в очках-сердцах" data-say="Ой, как мило…">
+      </div>
+    </div>
+
+    <div class="lovemeter reveal">
+      <p class="lovemeter__q">Измерить уровень любви?</p>
+      <button class="heartbtn" id="heartBtn" type="button" aria-label="Нажимай на сердце">
+        <svg viewBox="0 0 32 29" aria-hidden="true"><path d="M16 28.5 13.7 26.4C5.4 18.9 0 14 0 8.1 0 3.3 3.8-.5 8.7-.5c2.7 0 5.4 1.3 7.3 3.3C17.9.8 20.6-.5 23.3-.5 28.2-.5 32 3.3 32 8.1c0 5.9-5.4 10.8-13.7 18.3Z"/></svg>
+        <span id="heartPct">0%</span>
+      </button>
+      <p class="lovemeter__out" id="heartOut" aria-live="polite">Жми на сердце</p>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <img src="assets/stickers/love-00.webp" alt=""><img src="assets/stickers/love-01.webp" alt=""><img src="assets/stickers/love-04.webp" alt=""><img src="assets/stickers/love-05.webp" alt=""><img src="assets/stickers/love-06.webp" alt=""><img src="assets/stickers/love-08.webp" alt=""><img src="assets/stickers/love-09.webp" alt=""><img src="assets/stickers/patch-02.webp" alt=""><img src="assets/stickers/patch-29.webp" alt=""><img src="assets/stickers/patch-28.webp" alt=""><img src="assets/stickers/patch-15.webp" alt="">
+        <img src="assets/stickers/love-00.webp" alt=""><img src="assets/stickers/love-01.webp" alt=""><img src="assets/stickers/love-04.webp" alt=""><img src="assets/stickers/love-05.webp" alt=""><img src="assets/stickers/love-06.webp" alt=""><img src="assets/stickers/love-08.webp" alt=""><img src="assets/stickers/love-09.webp" alt=""><img src="assets/stickers/patch-02.webp" alt=""><img src="assets/stickers/patch-29.webp" alt=""><img src="assets/stickers/patch-28.webp" alt=""><img src="assets/stickers/patch-15.webp" alt="">
+      </div>
+    </div>
+  </div>
+  <svg class="wave wave--to-yellow" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 45 C 180 85 420 5 720 45 S 1260 85 1440 35 V90 H0Z"/></svg>
+</section>
+
+<!-- ============ 5. ФИНАЛ: ТОРТ ============ -->
+<section class="finale" id="finale">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="kicker">Секция 04 · Последнее задание</p>
+      <h2 class="mega mega--blue">Загадай желание<br>и задуй 19 свечей</h2>
+      <p class="sec-sub" id="cakeHint">Тапай по свечкам — или дуй по-настоящему 🎤</p>
+    </header>
+
+    <div class="cake-zone reveal">
+      <img class="stk cake-zone__m cake-zone__m--l" src="assets/stickers/minion-cheer.webp" alt="Радостный миньон" data-say="Дуй! Дуй!">
+      <img class="stk cake-zone__m cake-zone__m--r" src="assets/stickers/party-07.webp" alt="Миньон в колпаке" data-say="Загадала?">
+      <div class="cake" id="cake">
+        <div class="cake__candles" id="candles"></div>
+        <div class="cake__tier cake__tier--top"><span class="cake__drip"></span><span class="cake__num">19</span></div>
+        <div class="cake__tier cake__tier--bottom"><span class="cake__stitch"></span><span class="cake__pocket"></span></div>
+        <div class="cake__plate"></div>
+      </div>
+      <div class="cake__btns">
+        <button class="btn btn--blue" id="blowAll" type="button"><span>Задуть все</span> 💨</button>
+        <button class="btn btn--ghost" id="micBtn" type="button" hidden><span>Задуть голосом</span> 🎤</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <img src="assets/stickers/minion-bananas.webp" alt="" aria-hidden="true">
+    <p>Сделано с любовью и бананами · 12 ноября 2026</p>
+    <a class="foot__up" href="#top">Наверх ↑</a>
+  </footer>
+</section>
+</main>
+
+<!-- ============ НАШЕСТВИЕ МИНЬОНОВ ============ -->
+<div class="invasion" id="invasion" aria-hidden="true">
+  <div class="invasion__msg">
+    <p class="invasion__small">Желание принято в обработку ✨</p>
+    <h2 class="mega invasion__title">С днём рождения,<br>Лика!</h2>
+    <div class="invasion__btns">
+      <button class="btn btn--yellow" id="againBtn" type="button"><span>Ещё раз!</span> 🎉</button>
+      <button class="btn btn--ghost-light" id="closeInv" type="button"><span>Закрыть</span></button>
+    </div>
+  </div>
+  <div class="invasion__crowd" id="crowd"></div>
+</div>
+
+<!-- ============ ЛАЙТБОКС ============ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden>
+  <button class="lb__close round" id="lbClose" type="button" aria-label="Закрыть">✕</button>
+  <button class="lb__nav lb__nav--prev round" id="lbPrev" type="button" aria-label="Предыдущее">←</button>
+  <figure class="lb__fig">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb__nav lb__nav--next round" id="lbNext" type="button" aria-label="Следующее">→</button>
+</div>
+
+<div class="flash" id="flash" aria-hidden="true"></div>
+<div class="siren" id="siren" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+
+<script src="js/music.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
